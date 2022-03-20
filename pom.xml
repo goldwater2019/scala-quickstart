@@ -13,6 +13,7 @@
     <modules>
         <module>scala-core</module>
         <module>scala-oop</module>
+        <module>scala-rpc</module>
     </modules>
 
 
