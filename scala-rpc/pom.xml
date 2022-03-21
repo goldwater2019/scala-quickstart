@@ -19,7 +19,7 @@
         <fastjson.version>1.2.71</fastjson.version>
         <hadoop.version>3.3.1</hadoop.version>
 
-
+        <akka.version>2.6.17</akka.version>
         <scala.binary.version>2.12</scala.binary.version>
         <maven.plugin.build.helper.version>3.2.0</maven.plugin.build.helper.version>
         <!-- Needed for consistent times -->
@@ -71,6 +71,20 @@
             <artifactId>hadoop-common</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
+
+        <!-- 添加akka的actor依赖 -->
+               <dependency>
+                   <groupId>com.typesafe.akka</groupId>
+                   <artifactId>akka-actor_${scala.binary.version}</artifactId>
+                   <version>${akka.version}</version>
+               </dependency>
+
+               <!-- 多进程之间的Actor通信 -->
+               <dependency>
+                   <groupId>com.typesafe.akka</groupId>
+                   <artifactId>akka-remote_${scala.binary.version}</artifactId>
+                   <version>${akka.version}</version>
+               </dependency>
 
     </dependencies>
 
